@@ -9,6 +9,11 @@ node{
     }
     stage('Docker run'){
         sh "docker build --tag=message-server:latest demo/."
-        sh "docker run  -p9999:9999 message-server:latest"
+        sh "docker container rm -f message-server"
+        sh "docker run -d -p9999:9999 --name message-server message-server:latest"
+        sh "docker image prune -f"
+    }
+    stage("Clean workspace"){
+        cleanWs()
     }
 }

@@ -13,4 +13,9 @@ public class MainController {
     public String get(){
         return "Failed!";
     }
+
+    @GetMapping("/self")
+    public String get1(){
+        return "Success!";
+    }
 }

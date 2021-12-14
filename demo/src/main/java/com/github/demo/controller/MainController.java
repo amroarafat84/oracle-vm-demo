@@ -16,6 +16,6 @@ public class MainController {
 
     @GetMapping("/self")
     public String get1(){
-        return "Success!";
+        return "Success!!!!!!";
     }
 }

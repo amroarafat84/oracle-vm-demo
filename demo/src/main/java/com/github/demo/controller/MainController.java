@@ -11,7 +11,7 @@ public class MainController {
 
     @GetMapping
     public String get(){
-        return "Failed!";
+        return "Failed!!!";
     }
 
     @GetMapping("/self")
